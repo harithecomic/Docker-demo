@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  website-1:
+    build: website-1/.
+    ports:
+      - '7000:7000'
+  website-2:
+    build: website-2/.
+    ports:
+      - '8000:8000'
+  website-3:
+    build: website-3/.
+    ports:
+      - '9000:9000'

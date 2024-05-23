@@ -1,0 +1,6 @@
+version: '3'
+services:
+  nginx-demo:
+    image: nginx:latest
+    ports:
+      - '8080:8080'
