@@ -1,6 +1,24 @@
 version: '3'
 services:
-  nginx-demo:
-    image: nginx:latest
+  mysql-demo:
+    image: mysql:latest
     ports:
-      - '8080:8080'
+      - '3306:3306'
+    environment:
+      MYSQL_ROOT_PASSWORD: "Hari@2001"
+  # nginx:
+  #   image: nginx:latest
+  #   ports:
+  #     - '80:80'
+  # website-1:
+  #   build: website-1/.
+  #   ports:
+  #     - '7000:80'
+  # website-2:
+  #   build: website-2/.
+  #   ports:
+  #     - '8000-8002:80'
+  # website-3:
+  #   build: website-3/.
+  #   ports:
+  #     - '9000:4000'
