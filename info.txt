@@ -1,0 +1,57 @@
+#deployment commands
+#To run the docker-compose yaml file in currnt directory
+docker-compose -up -d
+
+#To view images
+docker images
+
+#To view containers
+docker ps
+
+#To Stops containers and removes containers, networks, volumes, and images created by up.
+docker-compose down
+
+
+docker cp nginx:/etc/nginx/conf.d/default.conf .
+
+#To copy a file from current directory to container directory
+docker cp default.conf <Container_id>:/etc/nginx/conf.d/default.conf
+
+#To revaluate files in a container
+docker exec <Container_id> nginx -t
+
+#To reload the container
+docker exec <Container_id> nginx -s reload
+
+#Enter into a container
+docker exec -it <Container_id> sh
+
+#Exit a container
+Exit
+
+#MYSQL commands
+#To list users
+select user,host from mysql.user;
+
+#To update the root user host to % to access from mysql workbench
+update mysql.user set host='%' where user='root';
+
+#To update privileges
+flush privileges;
+
+#If need delete the duplicate root user in mysql
+DELETE FROM mysql.user WHERE user='root' AND host='localhost';
+
+#To test external connection 
+mysql -uroot -p -P3306 -h127.0.0.1 
+
+
+
+GITHUB
+
+git config --list
+git status
+git add .
+git commit -m "second commit"
+$ git push
+
